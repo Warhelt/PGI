@@ -1,0 +1,56 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/darkBlue</item>
+        <item name="android:textColorSecondary">@color/darkBlue</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/darkBlue</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="GalaxyZooThemeToolbarDarkOverflow" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="android:textColorPrimary">@color/darkBlue</item>
+        <item name="actionMenuTextColor">@color/darkGrey</item>
+        <item name="android:textColorSecondary">@color/darkBlue</item>
+
+    </style>
+
+    <style name="spinnerStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+
+    </style>
+
+    <style name="editTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <style name="textViewStyle">
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textColorHint">@color/darkBlue</item>
+    </style>
+
+    <dimen name="design_navigation_item_separator_vertical_padding" tools:override="true">28dp
+    </dimen>
+    <dimen name="design_navigation_icon_size" tools:override="true">30sp</dimen>
+    <dimen name="design_navigation_text_size" tools:override="true">20sp</dimen>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ProgrssBarTheme">
+        <item name="colorAccent">@color/colorPrimary</item> <!-- Whatever color you want-->
+    </style>
+
+</resources>

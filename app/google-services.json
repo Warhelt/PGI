@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "762286473590",
+    "firebase_url": "https://pomocnikgiedowegoinwestora.firebaseio.com",
+    "project_id": "pomocnikgiedowegoinwestora",
+    "storage_bucket": "pomocnikgiedowegoinwestora.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762286473590:android:dc4faaa63ff1f12a",
+        "android_client_info": {
+          "package_name": "com.example.mariusz.pgi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762286473590-njqsgci8o1trt0qpjpcsju6mm7fm6biu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mariusz.pgi",
+            "certificate_hash": "7f9572e8f04c1b42d293fa5a236a6a6049c973cd"
+          }
+        },
+        {
+          "client_id": "762286473590-67789srt5gm2ej0jnu1iopov8env7sup.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC82JseKIng5hufxCgI0yBGcxilPNgcAXk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762286473590-67789srt5gm2ej0jnu1iopov8env7sup.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

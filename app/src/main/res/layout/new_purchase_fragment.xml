@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGrey">
+
+    <TextView
+        android:id="@+id/companyNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="86dp"
+        android:text="Nazwa spółki :"
+        android:textColor="@color/darkBlue" />
+
+    <Spinner
+        android:id="@+id/purchaseSpinner"
+        style="@style/spinnerStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="74dp"
+        android:layout_toEndOf="@+id/companyNameTxt"
+        android:popupBackground="@color/grey"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/purchaseAmountEditTxt"
+        style="@style/editTextStyle"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="189dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Ilość"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/purchaseBuyPriceEditTxt"
+        style="@style/editTextStyle"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/purchaseAmountEditTxt"
+        android:layout_marginEnd="44dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Cena kupna"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/addNewPurchaseBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/purchaseBuyPriceEditTxt"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="250dp"
+        android:text="Dodaj  zakup"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/addNewCompanyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
+        android:layout_toStartOf="@+id/createNewCompany"
+        android:text="Dodaj nową spółkę"
+        android:textColor="@color/darkBlue"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/createNewCompany"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignEnd="@+id/purchaseBuyPriceEditTxt"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/ic_add_circle_blue_24dp" />
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/owned_shares" android:title="Posiadane Akcje" android:icon="@drawable/ic_storage_black_24dp"/>
+    <item android:id="@+id/sales_history" android:title="Historia sprzedaży" android:icon="@drawable/ic_attach_money_black_24dp"/>
+    <item android:id="@+id/new_purchase" android:title="Nowy zakup" android:icon="@drawable/ic_create_black_24dp"/>
+    <item android:id="@+id/new_sale" android:title="Nowa sprzedaż" android:icon="@drawable/ic_add_box_black_24dp"/>
+    <item android:id="@+id/statistics" android:title="Statystyki" android:icon="@drawable/ic_baseline_bar_chart_24px"/>
+    <item android:id="@+id/exchange_rates" android:title="Kursy walut" android:icon="@drawable/ic_euro_symbol_black_24dp"/>
+    <item android:id="@+id/author" android:title="O autorze" android:icon="@drawable/ic_account_box_black_24dp"/>
+    <item android:id="@+id/rates" android:title="Notowania akcji" android:icon="@drawable/ic_trending_up_black_24dp"/>
+    <item android:id="@+id/logout" android:title="Wyloguj" android:icon="@drawable/ic_power_settings_new_black_24dp"/>
+</menu>

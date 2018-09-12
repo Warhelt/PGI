@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pomocnik Giełdowego Inwestora</string>
+    <string name="open">Otwórz</string>
+    <string name="close">Zamknij</string>
+    <string name="title_activity_rates">RatesActivity</string>
+
+</resources>
