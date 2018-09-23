@@ -1,4 +1,4 @@
-package com.example.mariusz.pgi;
+package com.example.mariusz.pgi.company;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mariusz.pgi.R;
 import com.example.mariusz.pgi.model.Company;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -20,14 +21,15 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class RecyclerViewHolders extends RecyclerView.ViewHolder {
+public class RecyclerViewCompanyHolders extends RecyclerView.ViewHolder {
 
     public TextView companyNameTxt;
     public ImageView deleteCompanyImgView;
     private List<Company> companyList;
 
-    public RecyclerViewHolders(View itemView, final List<Company> companyList) {
+    public RecyclerViewCompanyHolders(View itemView, final List<Company> companyList) {
         super(itemView);
+        System.out.println("company Hoolder");
         companyNameTxt = (TextView) itemView.findViewById(R.id.companyNameTxt);
         deleteCompanyImgView = (ImageView) itemView.findViewById(R.id.deleteCompany   );
         this.companyList = companyList;

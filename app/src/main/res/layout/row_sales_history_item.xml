@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:background="@color/darkGrey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border">
+        <TextView
+            android:id="@+id/salesHistoryCompanyNameTxt"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Alior"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/salesHistoryAmountTxt"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="200"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/salesHistoryBuyPriceTxt"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="22.23"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/salesHistorySellPriceTxt"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="23.76"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/salesHistoryProfitTxt"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="169.29"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/salesHistoryProfitPercentageTxt"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="13.33 "
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

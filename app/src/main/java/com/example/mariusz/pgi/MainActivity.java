@@ -14,12 +14,10 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
 
+import com.example.mariusz.pgi.newpurchase.NewPurchaseFragment;
+import com.example.mariusz.pgi.ownedshares.OwnedSharesFragment;
+import com.example.mariusz.pgi.saleshistory.SalesHistoryFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -50,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() != null) {
             mUserRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
+        }
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser == null){
+            System.out.println("on create if");
+            sendToStart();
+        }else{
+            System.out.println("on create else");
         }
         setSupportActionBar(toolbar);
 
@@ -103,8 +108,8 @@ public class MainActivity extends AppCompatActivity {
         });
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new OwnedSharesFragment()).commit();
-            navigationView.setCheckedItem(R.id.owned_shares);
+                    new SalesHistoryFragment()).commit();
+            navigationView.setCheckedItem(R.id.sales_history);
         }
     }
 
@@ -143,15 +148,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
         if(currentUser == null){
             System.out.println("Uruchamiam Main activity -  nieudło się wracam");
-
             sendToStart();
+        }else{
+            System.out.println("Uruchamiam Main activity -  udało się wracam");
         }
-        System.out.println("Uruchamiam Main activity -  udało się wracam");
 
     }
 

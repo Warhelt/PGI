@@ -1,4 +1,4 @@
-package com.example.mariusz.pgi;
+package com.example.mariusz.pgi.company;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,11 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.mariusz.pgi.R;
 import com.example.mariusz.pgi.model.Company;
 
 import java.util.List;
 
-public class RecyclerViewCompanyAdapter extends RecyclerView.Adapter<RecyclerViewHolders> {
+public class RecyclerViewCompanyAdapter extends RecyclerView.Adapter<RecyclerViewCompanyHolders> {
 
     private List<Company> companyList;
     protected Context context;
@@ -21,28 +22,25 @@ public class RecyclerViewCompanyAdapter extends RecyclerView.Adapter<RecyclerVie
     }
 
     @Override
-    public RecyclerViewHolders onCreateViewHolder(ViewGroup parent, int viewType) {
-        RecyclerViewHolders viewHolder= null;
+    public RecyclerViewCompanyHolders onCreateViewHolder(ViewGroup parent, int viewType) {
+        System.out.println("oncreat companyy");
+        RecyclerViewCompanyHolders viewHolder= null;
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_company_item,parent,false);
-        viewHolder = new RecyclerViewHolders(layoutView,companyList);
+        viewHolder = new RecyclerViewCompanyHolders(layoutView,companyList);
 
 
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewHolders holder, int position) {
+    public void onBindViewHolder(RecyclerViewCompanyHolders holder, int position) {
         holder.companyNameTxt.setText(companyList.get(position).getName());
 
     }
 
-    public void removeCompany(Company company){
-        companyList.remove(company);
-        notifyDataSetChanged();
-    }
-
     @Override
     public int getItemCount() {
+        System.out.println("size company : "+ companyList.size());
         return this.companyList.size();
     }
 }

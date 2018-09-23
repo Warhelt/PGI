@@ -1,4 +1,4 @@
-package com.example.mariusz.pgi;
+package com.example.mariusz.pgi.company;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.mariusz.pgi.R;
 import com.example.mariusz.pgi.model.Company;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

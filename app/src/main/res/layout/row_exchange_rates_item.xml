@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:background="@color/darkGrey">
+
+    <ImageView
+        android:id="@+id/countryFlag"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/ic_account_balance_black_24dp" />
+
+    <TextView
+        android:id="@+id/currencyCodeTxt"
+        style="@style/editTextStyle"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currencyNameTxt"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/countryFlag"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:text="USD / PLN"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/currencyNameTxt"
+        style="@style/editTextStyle"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/countryFlag"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/countryFlag"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:text="Dolar amerykański"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/currentyBuyPriceTxt"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/currencyNameTxt"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:text="3.6712"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/currencySellPriceTxt"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/currentyBuyPriceTxt"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:text="3.7193"
+        android:textStyle="bold|italic" />
+
+</RelativeLayout>
