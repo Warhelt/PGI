@@ -4,13 +4,80 @@
     android:layout_height="match_parent"
     android:background="@color/darkGrey">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/salesHistoryCompanyNameTxt"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nazwa"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/salesHistoryAmountTxt"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ilość"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/salesHistoryBuyPriceTxt"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cena K."
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/salesHistorySellPriceTxt"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cena S."
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/salesHistoryProfitTxt"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Zysk"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/salesHistoryProfitPercentageTxt"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="[ % ]"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/salesHistoryList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="69dp"
+        android:layout_marginTop="25dp"
         android:background="@color/white">
 
     </android.support.v7.widget.RecyclerView>

@@ -54,7 +54,7 @@
         android:layout_toEndOf="@+id/currencyNameTxt"
         android:layout_weight="1"
         android:gravity="center"
-        android:paddingStart="8dp"
+        android:paddingStart="16dp"
         android:text="3.6712"
         android:textStyle="bold|italic" />
 
@@ -63,12 +63,12 @@
         style="@style/textViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:layout_gravity="center"
-        android:layout_toEndOf="@+id/currentyBuyPriceTxt"
         android:layout_weight="1"
         android:gravity="center"
-        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         android:text="3.7193"
         android:textStyle="bold|italic" />
 

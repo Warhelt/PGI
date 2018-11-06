@@ -27,6 +27,9 @@
             android:name=".RatesActivity"
             android:label="@string/title_activity_rates"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="7ef224d24bd90e981cc453f2910873e0a08c09af" />
     </application>
 
 </manifest>

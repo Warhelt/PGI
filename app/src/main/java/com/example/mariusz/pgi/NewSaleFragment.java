@@ -126,8 +126,8 @@ public class NewSaleFragment extends Fragment {
             newSoldMap.put("amount", amount);
             newSoldMap.put("buyPrice", buyPrice);
             newSoldMap.put("sellPrice", sellPrice);
-            newSoldMap.put("profit", String.valueOf(decimalFormat.format(profit)));
-            newSoldMap.put("percentageProfit", String.valueOf(decimalFormat.format(percentageProfit)));
+            newSoldMap.put("profit", String.valueOf(decimalFormat.format(profit)).replace(',','.'));
+            newSoldMap.put("percentageProfit", String.valueOf(decimalFormat.format(percentageProfit)).replace(',','.'));
             newSoldMap.put("timeStamp", timeStamp);
 
 
@@ -242,7 +242,7 @@ public class NewSaleFragment extends Fragment {
         spinnerChargeArray.add("Wybierz prowizję");
         spinnerChargeArray.add("0.20");
         spinnerChargeArray.add("0.30");
-        spinnerChargeArray.add("0.40%");
+        spinnerChargeArray.add("0.40");
         spinnerChargeArray.add("0.50");
         spinnerChargeArray.add("0.60");
         spinnerChargeArray.add("0.70");

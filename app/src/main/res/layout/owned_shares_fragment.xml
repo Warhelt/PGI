@@ -4,13 +4,50 @@
     android:layout_height="match_parent"
     android:background="@color/darkGrey">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/ownedSharesCompanyNameTxt"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nazwa"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ownedSharesAmountTxt"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Ilość"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ownedSharesBuyPriceTxt"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cena K."
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/ownedSharesList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="69dp"
+        android:layout_marginTop="27dp"
         android:background="@color/white">
 
     </android.support.v7.widget.RecyclerView>

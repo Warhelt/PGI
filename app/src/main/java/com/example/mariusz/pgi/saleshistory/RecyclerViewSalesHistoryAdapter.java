@@ -40,6 +40,13 @@ public class RecyclerViewSalesHistoryAdapter extends RecyclerView.Adapter<Recycl
         holder.sellPriceSalesHistoryTxt.setText(soldSharesList.get(position).getSellPrice());
         holder.profitSalesHistoryTxt.setText(soldSharesList.get(position).getProfit());
         holder.percentageProfitSalesHistoryTxt.setText(soldSharesList.get(position).getPercentageProfit());
+        if(Double.parseDouble(soldSharesList.get(position).getProfit()) >= 0){
+            holder.profitSalesHistoryTxt.setTextColor(context.getResources().getColor(R.color.darkGreen));
+            holder.percentageProfitSalesHistoryTxt.setTextColor(context.getResources().getColor(R.color.darkGreen));
+        }else{
+            holder.profitSalesHistoryTxt.setTextColor(context.getResources().getColor(R.color.darkRed));
+            holder.percentageProfitSalesHistoryTxt.setTextColor(context.getResources().getColor(R.color.darkRed));
+        }
 
 
     }
