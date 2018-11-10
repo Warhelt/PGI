@@ -65,9 +65,8 @@
         <Button
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_margin="10dp"
-            android:layout_marginTop="10dp"
             android:background="@color/darkBlue"
             android:text="Zaloguj"
             android:textColor="@color/white" />
@@ -77,23 +76,31 @@
         <Button
             android:id="@+id/btn_register"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
             android:background="@color/darkBlue"
             android:text="Utwórz konto"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="15dp" />
+            android:textColor="@color/white" />
 
         <com.facebook.login.widget.LoginButton
             android:id="@+id/btn_facebook_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
             android:layout_marginTop="10dp"
             android:text="Facebook Login" />
 
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_google_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp">
+
+        </com.google.android.gms.common.SignInButton>
     </LinearLayout>
 
 </LinearLayout>
