@@ -13,25 +13,25 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp" >
+        android:paddingRight="20dp">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="40dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/header_backgroud_image" />
 
         <!--<TextView-->
-            <!--android:id="@+id/textView"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:gravity="center"-->
-            <!--android:textSize="30dp"-->
-            <!--android:textColor="@color/darkBlue"-->
-            <!--android:layout_marginBottom="30dp"-->
-            <!--android:text="Witaj w Pomocniku Giełdowego Inwestora" />-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="30dp"-->
+        <!--android:textColor="@color/darkBlue"-->
+        <!--android:layout_marginBottom="30dp"-->
+        <!--android:text="Witaj w Pomocniku Giełdowego Inwestora" />-->
 
         <EditText
             android:id="@+id/email"
@@ -85,6 +85,15 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="15dp" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btn_facebook_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Facebook Login" />
+
     </LinearLayout>
 
 </LinearLayout>

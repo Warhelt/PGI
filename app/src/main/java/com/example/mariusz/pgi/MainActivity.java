@@ -20,6 +20,7 @@ import com.crashlytics.android.answers.Answers;
 import com.example.mariusz.pgi.newpurchase.NewPurchaseFragment;
 import com.example.mariusz.pgi.ownedshares.OwnedSharesFragment;
 import com.example.mariusz.pgi.saleshistory.SalesHistoryFragment;
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -105,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.logout:
                         FirebaseAuth.getInstance().signOut();
+                        mAuth.signOut();
+                        LoginManager.getInstance().logOut();
                         sendToStart();
                 }
                 drawerLayout.closeDrawer(GravityCompat.START);

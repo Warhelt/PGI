@@ -3,5 +3,6 @@
     <string name="open">Otwórz</string>
     <string name="close">Zamknij</string>
     <string name="title_activity_rates">RatesActivity</string>
-
+    <string name="facebook_app_id">2259797197586099</string>
+    <string name="fb_login_protocol_scheme">fb2259797197586099</string>
 </resources>
