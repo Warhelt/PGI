@@ -96,10 +96,6 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new StatisticsFragment()).commit();
                         toolbar.setTitle("Statystyki");
                         break;
-                    case R.id.author:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AuthorFragment()).commit();
-                        toolbar.setTitle("O autorze");
-                        break;
                     case R.id.rates:
                     Intent intent = new Intent(getApplicationContext(), RatesActivity.class);
                     startActivity(intent);

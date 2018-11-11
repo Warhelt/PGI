@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -95,6 +96,8 @@ public class LoginActivity extends AppCompatActivity {
                 startActivityForResult(signInIntent, 101);
             }
         });
+        TextView textView = (TextView) googleLoginBtn.getChildAt(0);
+        textView.setText("Kontynuuj za pośrednictwem Google");
     }
 
     @Override

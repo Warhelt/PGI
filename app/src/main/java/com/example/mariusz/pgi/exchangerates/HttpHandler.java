@@ -1,4 +1,4 @@
-package com.example.mariusz.pgi;
+package com.example.mariusz.pgi.exchangerates;
 
 import android.util.Log;
 

@@ -7,7 +7,6 @@
     <item android:id="@+id/new_sale" android:title="Nowa sprzedaż" android:icon="@drawable/ic_add_box_black_24dp"/>
     <item android:id="@+id/statistics" android:title="Statystyki" android:icon="@drawable/ic_baseline_bar_chart_24px"/>
     <item android:id="@+id/exchange_rates" android:title="Kursy walut" android:icon="@drawable/ic_euro_symbol_black_24dp"/>
-    <item android:id="@+id/author" android:title="O autorze" android:icon="@drawable/ic_account_box_black_24dp"/>
     <item android:id="@+id/rates" android:title="Notowania akcji" android:icon="@drawable/ic_trending_up_black_24dp"/>
     <item android:id="@+id/logout" android:title="Wyloguj" android:icon="@drawable/ic_power_settings_new_black_24dp"/>
 </menu>
