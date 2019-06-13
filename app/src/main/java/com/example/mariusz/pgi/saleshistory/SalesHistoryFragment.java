@@ -39,13 +39,13 @@ public class SalesHistoryFragment extends Fragment {
 
     private RecyclerViewSalesHistoryAdapter recyclerViewSalesHistoryAdapter;
     private List<SoldShares> soldSharesList;
-
+    private SoldShares soldShares;
     @BindView(R.id.salesHistoryList)
     RecyclerView recyclerView;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sales_history_fragment, container,false);
         ButterKnife.bind(this, view);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Historia Sprzedaży");
@@ -57,23 +57,18 @@ public class SalesHistoryFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         String user_id = mAuth.getCurrentUser().getUid();
         databaseRef = FirebaseDatabase.getInstance().getReference().child("Users").child(user_id).child("SoldShares");
-
-
         databaseRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 getAllSoldPosition(dataSnapshot);
             }
-
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
                 fillSalesHistoryRecyclerView(soldSharesList);
             }
-
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
                 fillSalesHistoryRecyclerView(soldSharesList);
-
             }
 
             @Override
@@ -92,7 +87,7 @@ public class SalesHistoryFragment extends Fragment {
 
     private void getAllSoldPosition(DataSnapshot dataSnapshot) {
         for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
-                    SoldShares soldShares = new SoldShares();
+                    soldShares = new SoldShares();
                     Map<String, Object> map = (Map<String, Object>) postSnapshot.getValue();
                     soldShares.setCompanyName(map.get("name").toString());
                     soldShares.setAmount(map.get("amount").toString());
@@ -103,7 +98,7 @@ public class SalesHistoryFragment extends Fragment {
                     soldShares.setTimeStamp(map.get("timeStamp").toString());
                     soldSharesList.add(soldShares);
         }
-        fillSalesHistoryRecyclerView(soldSharesList);
+            fillSalesHistoryRecyclerView(soldSharesList);
     }
 
     private void fillSalesHistoryRecyclerView(List<SoldShares> soldSharesList) {

@@ -62,21 +62,18 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-    private void registerUser(final String regName, final String regEmail, final String regPassword) {
+            private void registerUser(final String regName, final String regEmail, final String regPassword) {
         mAuth.createUserWithEmailAndPassword(regEmail, regPassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
                     String uid = currentUser.getUid();
-
                     mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(uid);
-
                     String device_token = FirebaseInstanceId.getInstance().getToken();
                     HashMap<String, String> userMap = new HashMap<>();
                     userMap.put("name", regName);
                     userMap.put("device_token", device_token);
-
                     mDatabase.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -88,7 +85,6 @@ public class RegisterActivity extends AppCompatActivity {
                             }
                         }
                     });
-
                 } else {
                     regProgress.hide();
                     if(regPassword.length()<5){

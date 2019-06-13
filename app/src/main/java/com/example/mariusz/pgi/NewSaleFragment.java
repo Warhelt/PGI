@@ -103,24 +103,19 @@ public class NewSaleFragment extends Fragment {
 
     @OnClick(R.id.addNewSaleBtn)
     public void addNewSale(){
-
         String amount = saleAmountEditTxt.getText().toString();
         String buyPrice = saleBuyPriceEditTxt.getText().toString();
         String sellPrice = saleSellPriceEditTxt.getText().toString();
-
-
         if(!amount.isEmpty() && !buyPrice.isEmpty() && !sellPrice.isEmpty() && spinner.getSelectedItemPosition() > 0 && spinnerCharge.getSelectedItemPosition() > 0){
             String companyName = spinner.getSelectedItem().toString();
             Double percentageCharge = Double.parseDouble(spinnerCharge.getSelectedItem().toString());
             Double countedCharge = (((Double.parseDouble(sellPrice) + Double.parseDouble(buyPrice)) / 2) * Double.parseDouble(amount) * percentageCharge) / 100;
-
             Double profit = ((Double.parseDouble(sellPrice) - Double.parseDouble(buyPrice)) * Double.parseDouble(amount)) - countedCharge;
             Double percentageProfit = (Double.parseDouble(sellPrice) - Double.parseDouble(buyPrice)) / Double.parseDouble(buyPrice) * 100 - percentageCharge;
             String timeStamp = getCurrentTimeStamp();
             mAuth = FirebaseAuth.getInstance();
             String user_id = mAuth.getCurrentUser().getUid();
             databaseRef = FirebaseDatabase.getInstance().getReference().child("Users").child(user_id).child("SoldShares").child(companyName).child(timeStamp);
-
             HashMap<String, String> newSoldMap = new HashMap<>();
             newSoldMap.put("name", companyName);
             newSoldMap.put("amount", amount);
@@ -129,8 +124,6 @@ public class NewSaleFragment extends Fragment {
             newSoldMap.put("profit", String.valueOf(decimalFormat.format(profit)).replace(',','.'));
             newSoldMap.put("percentageProfit", String.valueOf(decimalFormat.format(percentageProfit)).replace(',','.'));
             newSoldMap.put("timeStamp", timeStamp);
-
-
             databaseRef.setValue(newSoldMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {

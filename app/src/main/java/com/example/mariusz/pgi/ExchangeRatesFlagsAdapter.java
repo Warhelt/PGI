@@ -1,6 +1,5 @@
 package com.example.mariusz.pgi;
 
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,5 +65,11 @@ public class ExchangeRatesFlagsAdapter extends ArrayAdapter<HashMap<String, Stri
         flagList.add(R.drawable.sek);
         }
 
+    public List<Integer> getFlagList() {
+        return flagList;
+    }
 
+    public void setFlagList(List<Integer> flagList) {
+        this.flagList = flagList;
+    }
 }

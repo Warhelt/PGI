@@ -35,7 +35,7 @@ public class OwnedSharesFragment extends Fragment {
     private FirebaseAuth mAuth;
     private DatabaseReference databaseRef;
     private LinearLayoutManager linearLayoutManager;
-
+    private OwnedShares ownedShares;
     private RecyclerViewOwnedSharesAdapter recyclerViewOwnedSharesAdapter;
     private List<OwnedShares> ownedSharesList;
 
@@ -63,7 +63,6 @@ public class OwnedSharesFragment extends Fragment {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 getAllOwnedShares(dataSnapshot);
                 fillOwnedSharesRecyclerView(ownedSharesList);
-
             }
 
             @Override
@@ -116,7 +115,7 @@ public class OwnedSharesFragment extends Fragment {
 
     public void getAllOwnedShares(DataSnapshot dataSnapshot){
             for (DataSnapshot singleSnapshot: dataSnapshot.getChildren()) {
-                OwnedShares ownedShares = new OwnedShares();
+                ownedShares = new OwnedShares();
                 Map<String, Object> map = (Map<String, Object>) singleSnapshot.getValue();
                 ownedShares.setCompanyName(map.get("name").toString());
                 ownedShares.setAmount(map.get("amount").toString());

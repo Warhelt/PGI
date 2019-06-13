@@ -95,7 +95,7 @@ public class RecyclerViewSalesHistoryHolders extends RecyclerView.ViewHolder {
     {
         AlertDialog myQuittingDialogBox =new AlertDialog.Builder(context)
                 .setTitle("Delete")
-                .setMessage("Do you want to Delete")
+                .setMessage("Are you sure you want to delete?")
                 .setIcon(R.drawable.ic_delete_blue_24dp)
                 .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {

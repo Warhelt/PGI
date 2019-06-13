@@ -14,6 +14,7 @@ public class RecyclerViewSalesHistoryAdapter extends RecyclerView.Adapter<Recycl
 
     private List<SoldShares> soldSharesList;
     protected Context context;
+    private RecyclerViewSalesHistoryHolders viewHolder;
 
     public RecyclerViewSalesHistoryAdapter(Context context, List<SoldShares> soldSharesList) {
         this.context = context;
@@ -22,11 +23,9 @@ public class RecyclerViewSalesHistoryAdapter extends RecyclerView.Adapter<Recycl
 
     @Override
     public RecyclerViewSalesHistoryHolders onCreateViewHolder(ViewGroup parent, int viewType) {
-        RecyclerViewSalesHistoryHolders viewHolder = null;
+        viewHolder = null;
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_sales_history_item, parent, false);
         viewHolder = new RecyclerViewSalesHistoryHolders(layoutView, soldSharesList, context);
-
-
         return viewHolder;
     }
 

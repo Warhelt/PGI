@@ -28,6 +28,8 @@ public class ExchangeRatesFragment extends Fragment {
     @BindView(R.id.exchangeRatesList)
     ListView exchangeRatesListView;
 
+    private ExchangeRatesFlagsAdapter flagsAdapter;
+    private HttpHandler httpHandler;
     ArrayList<HashMap<String, String>> exchangeRatesList;
 
     @Nullable
@@ -52,9 +54,9 @@ public class ExchangeRatesFragment extends Fragment {
 
         @Override
         protected Void doInBackground(Void... arg0) {
-            HttpHandler sh = new HttpHandler();
+            httpHandler = new HttpHandler();
             String url = "http://api.nbp.pl/api/exchangerates/tables/c?format=json";
-            String jsonStr = sh.makeServiceCall(url);
+            String jsonStr = httpHandler.makeServiceCall(url);
             if (jsonStr != null) {
                 try {
                     JSONArray currencies = new JSONArray(jsonStr);
@@ -105,9 +107,8 @@ public class ExchangeRatesFragment extends Fragment {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            ExchangeRatesFlagsAdapter flagsAdapter = new ExchangeRatesFlagsAdapter(getContext(),exchangeRatesList);
+            flagsAdapter = new ExchangeRatesFlagsAdapter(getContext(),exchangeRatesList);
             exchangeRatesListView.setAdapter(flagsAdapter);
         }
     }
-
 }

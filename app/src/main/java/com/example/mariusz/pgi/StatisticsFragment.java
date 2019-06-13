@@ -116,53 +116,31 @@ public class StatisticsFragment extends Fragment {
             }
         });
         colors = new ArrayList<>();
-        colors.add(Color.GRAY);
-        colors.add(Color.BLUE);
-        colors.add(Color.RED);
-        colors.add(Color.GREEN);
-        colors.add(Color.CYAN);
-        colors.add(Color.YELLOW);
-        colors.add(Color.MAGENTA);
+        colors.add(getResources().getColor(R.color.one));
+        colors.add(getResources().getColor(R.color.two));
+        colors.add(getResources().getColor(R.color.three));
+        colors.add(getResources().getColor(R.color.four));
+        colors.add(getResources().getColor(R.color.five));
+        colors.add(getResources().getColor(R.color.six));
+        colors.add(getResources().getColor(R.color.seven));
+
 
         return view;
     }
 
 
     private void addDataSet(List<PieEntry> yEntrys, List<LegendEntry> entries, String name) {
-//        List<Integer> sharesAmounts = new ArrayList<>(map.values());
-//        List<PieEntry> yEntrys = new ArrayList<>();
-//
-//        for(int i = 0; i < map.size(); i++){
-//            yEntrys.add(new PieEntry(sharesAmounts.get(i), i));
-//        }
-        //create the data set
         PieDataSet pieDataSet = new PieDataSet(yEntrys, name);
         pieDataSet.setSliceSpace(2);
         pieDataSet.setValueTextSize(14);
         pieDataSet.setValueLineColor(Color.WHITE);
-
-        //add colors to dataset
-
         pieDataSet.setColors(colors);
 
-        //add legend to chart
         Legend legend = pieChart.getLegend();
         legend.setForm(Legend.LegendForm.DEFAULT);
         legend.setPosition(Legend.LegendPosition.LEFT_OF_CHART);
-
-//        List<LegendEntry> entries = new ArrayList<>();
-//        List<String> sharesNames = new ArrayList<String>(map.keySet());
-//        for (int i = 0; i < map.size(); i++) {
-//            LegendEntry entry = new LegendEntry();
-//            entry.formColor = colors.get(i);
-//            entry.label = sharesNames.get(i);
-//            entry.formSize = 14;
-//
-//            entries.add(entry);
-//        }
         legend.setCustom(entries);
         legend.setTextColor(Color.WHITE);
-        //create pie data object
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
         pieChart.invalidate();

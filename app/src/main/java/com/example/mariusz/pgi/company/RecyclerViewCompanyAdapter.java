@@ -15,6 +15,8 @@ public class RecyclerViewCompanyAdapter extends RecyclerView.Adapter<RecyclerVie
 
     private List<Company> companyList;
     protected Context context;
+    private RecyclerViewCompanyHolders viewHolder;
+
 
     public RecyclerViewCompanyAdapter(Context context, List<Company> companyList){
         this.context = context;
@@ -23,8 +25,7 @@ public class RecyclerViewCompanyAdapter extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public RecyclerViewCompanyHolders onCreateViewHolder(ViewGroup parent, int viewType) {
-        System.out.println("oncreat companyy");
-        RecyclerViewCompanyHolders viewHolder= null;
+        viewHolder = null;
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_company_item,parent,false);
         viewHolder = new RecyclerViewCompanyHolders(layoutView,companyList);
 

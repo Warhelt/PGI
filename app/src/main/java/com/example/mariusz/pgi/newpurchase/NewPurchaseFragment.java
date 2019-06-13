@@ -74,24 +74,19 @@ public class NewPurchaseFragment extends Fragment {
 
     @OnClick(R.id.addNewPurchaseBtn)
     public void addNewPurchase(){
-
         String amount = purchaseAmountEditTxt.getText().toString();
         String buyPrice = purchaseBuyPriceEditTxt.getText().toString();
         if(!amount.isEmpty() && !buyPrice.isEmpty() && spinner.getSelectedItemPosition() > 0){
-
             String companyName = spinner.getSelectedItem().toString();
             mAuth = FirebaseAuth.getInstance();
             String user_id = mAuth.getCurrentUser().getUid();
             String timeStamp = getCurrentTimeStamp();
             databaseRef = FirebaseDatabase.getInstance().getReference().child("Users").child(user_id).child("OwnedShares").child(companyName).child(timeStamp);
-
             HashMap<String, String> newPurchaseMap = new HashMap<>();
             newPurchaseMap.put("name", companyName);
             newPurchaseMap.put("amount", amount);
             newPurchaseMap.put("buyPrice", buyPrice);
             newPurchaseMap.put("timeStamp", timeStamp);
-
-
             databaseRef.setValue(newPurchaseMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {

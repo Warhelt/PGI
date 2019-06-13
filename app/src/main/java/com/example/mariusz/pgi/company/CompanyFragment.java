@@ -39,6 +39,7 @@ public class CompanyFragment extends Fragment {
     @BindView(R.id.companyList)
     RecyclerView recyclerView;
 
+    private Company company;
     private FirebaseAuth mAuth;
     private DatabaseReference databaseRef;
     private LinearLayoutManager linearLayoutManager;
@@ -108,11 +109,11 @@ public class CompanyFragment extends Fragment {
 
     private void getAllCompany(DataSnapshot dataSnapshot) {
         for (DataSnapshot singleSnapShot :  dataSnapshot.getChildren()) {
-            String companyName = singleSnapShot.getValue(String.class);
-            companyList.add(new Company(companyName));
+            //String companyName = singleSnapShot.getValue(String.class);
+            company = new Company(singleSnapShot.getValue(String.class));
+            companyList.add(company);
             recyclerViewCompanyAdapter = new RecyclerViewCompanyAdapter(getContext(), companyList);
             recyclerView.setAdapter(recyclerViewCompanyAdapter);
-
         }
     }
 

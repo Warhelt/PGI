@@ -15,6 +15,7 @@ public class RecyclerViewOwnedSharesAdapter extends RecyclerView.Adapter<Recycle
 
     private List<OwnedShares> ownedSharesList;
     protected Context context;
+    private RecyclerViewOwnedSharesHolders viewHolder;
 
     public RecyclerViewOwnedSharesAdapter(Context context, List<OwnedShares> ownedSharesList){
         this.context = context;
@@ -23,7 +24,7 @@ public class RecyclerViewOwnedSharesAdapter extends RecyclerView.Adapter<Recycle
 
     @Override
     public RecyclerViewOwnedSharesHolders onCreateViewHolder(ViewGroup parent, int viewType) {
-        RecyclerViewOwnedSharesHolders viewHolder= null;
+        viewHolder = null;
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_owned_shares_item,parent,false);
         viewHolder = new RecyclerViewOwnedSharesHolders(layoutView, ownedSharesList, context);
         return viewHolder;

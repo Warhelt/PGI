@@ -31,6 +31,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -55,13 +58,13 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
     implementation 'com.facebook.android:facebook-login:[4,5)'
     implementation 'com.google.android.gms:play-services-auth:12.0.1'
-
-
-    //implementation 'com.firebaseui:firebase-ui-database:2.2.0'
-    //implementation 'com.google.firebase:firebase-storage:12.0.1'
     compile('com.crashlytics.sdk.android:answers:1.4.3@aar') {
         transitive = true;
     }
+    // Optional -- Robolectric environment
+    testImplementation 'androidx.test:core:1.0.0'
+    // Optional -- Mockito framework
+    testImplementation 'org.mockito:mockito-core:1.10.19'
 
 
 }
